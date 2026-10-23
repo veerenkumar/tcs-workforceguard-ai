@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #050b14;
+  --bg-secondary: #0a1322;
+  --card-bg: rgba(13, 24, 41, 0.75);
+  --card-border: rgba(56, 189, 248, 0.12);
+  --accent-cyan: #38bdf8;
+  --accent-blue: #0070ad;
+}
+
+body {
+  background-color: #040810;
+  color: #f1f5f9;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  background-image: 
+    radial-gradient(at 15% 15%, rgba(0, 112, 173, 0.12) 0px, transparent 40%),
+    radial-gradient(at 85% 85%, rgba(14, 165, 233, 0.08) 0px, transparent 45%);
+  background-attachment: fixed;
+}
+
+/* Glassmorphism card styles */
+.glass-panel {
+  background: rgba(10, 19, 34, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.glass-panel-hover {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel-hover:hover {
+  border-color: rgba(56, 189, 248, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 36px 0 rgba(0, 112, 173, 0.18);
+}
+
+/* Gradient glows */
+.glow-accent {
+  text-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080f1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #38bdf8;
+}
